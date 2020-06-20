@@ -15,7 +15,7 @@
         app:layout_constraintVertical_bias=".2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="@onKeyChainClicked"
+        android:onClick="onKeyChainClicked"
         android:text="Key Chain"/>
 
     <Button
@@ -27,6 +27,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="keySotre"/>
+
+
+    <Button
+        android:id="@+id/button_mainactivity_rsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RSA"
+        android:layout_marginTop="20dp"
+        android:onClick="onRsaClicked"
+        app:layout_constraintTop_toBottomOf="@id/button_mainactivity_keystore"
+        app:layout_constraintRight_toRightOf="@id/button_mainactivity_keystore"
+        app:layout_constraintLeft_toLeftOf="@id/button_mainactivity_keystore"/>
+
+    <Button
+        android:id="@+id/button_mainactivity_aes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AES"
+        app:layout_constraintRight_toRightOf="@id/button_mainactivity_rsa"
+        app:layout_constraintLeft_toLeftOf="@id/button_mainactivity_rsa"
+        app:layout_constraintTop_toBottomOf="@id/button_mainactivity_rsa"
+        android:layout_marginTop="20dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,7 @@ class KeyStoreWrapper(private val context : Context) {
         generator.initialize(builder.build())
     }
 
-    private fun initGeneratorWithKeyPairGeneratorSpec(generator: KeyPairGenerator , alias : String){
+    private fun initGeneratorWithKeyPairGeneratorSpec(generator: KeyPairGenerator, alias : String){
         val startDate = Calendar.getInstance()
         val endDate = Calendar.getInstance()
         endDate.add(Calendar.YEAR, 20)
@@ -77,7 +77,7 @@ class KeyStoreWrapper(private val context : Context) {
 
     @RequiresApi(Build.VERSION_CODES.M)
     fun createAndroidKeyStoreSymmetricKey(alias: String) : SecretKey {
-        val keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES , "AndroidKeyStore");
+        val keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES , "AndroidKeyStore")
         val builder = KeyGenParameterSpec.Builder(alias,KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT)
                 .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
                 .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)

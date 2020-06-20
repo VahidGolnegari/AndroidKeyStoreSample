@@ -29,8 +29,17 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
-    public void onKeyChainClicked(){
-        Intent intent = KeyChain.createInstallIntent();
+    public void onKeyChainClicked(View view){
+        startActivity(new Intent(this , KeyChainActivity.class));
+    }
+
+    public void onRsaClicked(View view) {
+        startActivity(new Intent(this , RsaActivity.class));
+
+    }
+
+    public void onAesClicked(View view) {
+
     }
 
 }
